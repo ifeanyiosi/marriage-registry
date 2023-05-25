@@ -17,11 +17,12 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-gray-1 text-primary-10 rounded-[6px]",
-        primary: "text-white bg-primary hover:bg-choiceOne  rounded-[6px]",
+        primary:
+          "text-white bg-primary hover:bg-choiceOne text-[14px]  rounded-[6px]",
         secondary:
-          "text-black bg-secondary hover:bg-choiceTwo rounded-[6px] border-[1px] border-[#eaeaea] border-solid ",
-        choiceOne: "bg-primary-10 text-gray-1 rounded-[6px]",
-        choiceTwo: "text-gray-6 bg-gray-2 rounded-[6px]",
+          "text-black bg-secondary hover:bg-choiceTwo rounded-[6px] text-[14px] border-[1px] border-[#eaeaea] border-solid ",
+        choiceOne: "bg-primary-10 text-gray-1 rounded-[6px] text-[14px]",
+        choiceTwo: "text-gray-6 bg-gray-2 rounded-[6px] text-[14px]",
       },
       size: {
         default: "h-[40px]",

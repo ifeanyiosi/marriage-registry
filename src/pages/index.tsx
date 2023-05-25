@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Button from "@/components/Button";
 import NavigationBar from "@/components/NavigationBar";
-import LandingHero from "@/page-components/LandingPage";
+import LandingHero from "@/page-components/LandingPage/LandingHero";
+import LandingSecond from "@/page-components/LandingPage/LandingSecond";
+import LandingThird from "@/page-components/LandingPage/LandingThird";
+import LandingForth from "@/page-components/LandingPage/LandingForth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +22,9 @@ export default function Home() {
       <NavigationBar />
       <SectionDivider />
       <LandingHero />
+      <LandingSecond />
+      <LandingThird />
+      <LandingForth />
     </main>
   );
 }
