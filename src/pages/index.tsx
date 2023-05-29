@@ -5,6 +5,9 @@ import LandingHero from "@/page-components/LandingPage/LandingHero";
 import LandingSecond from "@/page-components/LandingPage/LandingSecond";
 import LandingThird from "@/page-components/LandingPage/LandingThird";
 import LandingForth from "@/page-components/LandingPage/LandingForth";
+import FAQs from "@/components/FAQ";
+import LandingFifth from "@/page-components/LandingPage/LandingFifth";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +28,9 @@ export default function Home() {
       <LandingSecond />
       <LandingThird />
       <LandingForth />
+      <FAQs />
+      <LandingFifth />
+      <Footer />
     </main>
   );
 }

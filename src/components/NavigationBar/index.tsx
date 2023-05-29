@@ -13,8 +13,8 @@ const NavigationBar = (props: Props) => {
   };
 
   return (
-    <nav className="fixed shadow-md left-[50%] bg-white w-full  lg:px-20 mx-auto -translate-x-[50%] top-0 z-50 flex justify-center items-center">
-      <div className="max-w-[1366px] w-full h-[80px]  justify-between items-center hidden lg:flex">
+    <nav className="fixed shadow-md left-[50%] bg-white w-full  lg:px-[130px] mx-auto -translate-x-[50%] top-0 z-50 flex justify-center items-center">
+      <div className=" w-full h-[80px]  justify-between items-center hidden lg:flex">
         <div className="flex items-center gap-[40px]">
           <Link className="text-[14px] font-[500] font-Inter" href="">
             Pricing

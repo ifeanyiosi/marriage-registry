@@ -35,7 +35,7 @@ const LandingThird = (props: Props) => {
             99% Success Rate
           </h2>
           <p className="text-[14px] font-Inter text-start font-[400]  ">
-            All Courtly officiants are based worldwide and licensed to perform
+            All Courtly officiants are based worldwide and licensed to <br /> perform
             remote ceremonies.
           </p>
         </div>
@@ -51,7 +51,7 @@ const LandingThird = (props: Props) => {
             Satisfaction Guarantee
           </h2>
           <p className="text-[14px] font-Inter text-start font-[400] ">
-            Get a full refund if your Marriage License is cancelled or not
+            Get a full refund if your Marriage License is cancelled or not <br />
             approved for any reason.
           </p>
         </div>
@@ -67,7 +67,7 @@ const LandingThird = (props: Props) => {
             Worldwide-Based Officiants
           </h2>
           <p className="text-[14px] font-Inter text-start font-[400]  ">
-            All Courtly officiants are based worldwide and licensed to perform
+            All Courtly officiants are based worldwide and licensed to <br /> perform
             remote ceremonies.
           </p>
         </div>
