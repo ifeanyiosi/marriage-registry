@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "../Button";
+import { useRouter } from "next/router";
 
-type Props = {};
-
-const NavigationBar = (props: Props) => {
+const NavigationBar = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -27,9 +27,13 @@ const NavigationBar = (props: Props) => {
           <h1 className="font-Inter text-[32px]">LOML</h1>
         </div>
         <div className="flex items-center gap-[20px] font-Inter">
-          <Button variant="secondary">Log In</Button>
+          <Button onClick={() => router.push("/login")} variant="secondary">
+            Log In
+          </Button>
 
-          <Button variant="primary">Get Married</Button>
+          <Button onClick={() => router.push("/signup")} variant="primary">
+            Get Married
+          </Button>
         </div>
       </div>
       <div className="flex py-4 px-5 items-center relative lg:hidden justify-between w-full">
@@ -55,9 +59,19 @@ const NavigationBar = (props: Props) => {
               </Link>
 
               <div className="flex flex-col gap-8 px-4 py-4">
-                <Button variant="secondary">Log In</Button>
+                <Button
+                  onClick={() => router.push("/login")}
+                  variant="secondary"
+                >
+                  Log In
+                </Button>
 
-                <Button variant="primary">Get Married</Button>
+                <Button
+                  onClick={() => router.push("/signup")}
+                  variant="primary"
+                >
+                  Get Married
+                </Button>
               </div>
             </div>
           </div>

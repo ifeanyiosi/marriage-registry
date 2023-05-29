@@ -11,7 +11,7 @@ function Footer() {
     });
   };
   return (
-    <footer className="w-full bg-primary flex flex-col min-h-[55px]  footerBg justify-end items-center [@media_(min-width:_658px)]:pt-[58px] ">
+    <footer className="w-full bg-primary py-20 flex flex-col min-h-[55px]  footerBg justify-end items-center [@media_(min-width:_658px)]:pt-[58px] ">
       <div className=" flex flex-col gap-[32px]  mb-[82px] items-center justify-between w-full px-6 lg:px-[130px]">
         <div className="flex w-full gap-[67px] [@media_(min-width:_658px)]:flex-row flex-col justify-between">
           <div className="flex flex-col items-start gap-[8px] max-w-[300px]">
