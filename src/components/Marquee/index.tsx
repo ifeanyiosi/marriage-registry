@@ -13,14 +13,15 @@ const Marquee = ({ heading, body, image }: MarqueeProps) => {
       <div className="flex flex-col  items-center justify-center ">
         <div className="h-[300px] ">
           <Image
-            className="rounded-[16px] max-h-[400px] h-full "
+            className="rounded-[16px] max-h-[250px] h-full "
             height={200}
             width={300}
             src={image}
             alt="picture-card"
+            objectFit="cover"
           />
         </div>
-        <div className="bg-[#fff] flex  flex-col rounded-[8px]   p-4 items-center justify-center  translate-y-[-100px] opacity-[0.8]">
+        <div className="bg-[#fff] flex  flex-col rounded-[8px]   p-4 items-center justify-center  translate-y-[-150px] opacity-[0.8]">
           <p className="text-center text-[#000] text-[12px]">{heading} </p>
           <p className="text-center text-[#8c8c8c] text-[10px]"> {body} </p>
         </div>

@@ -1,51 +1,128 @@
-"use client";
 import React from "react";
-import clsx from "clsx";
-import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
+import { ErrorMessage } from "formik";
+import { Input, FormItem } from "formik-antd";
 
-type InputProps = {
-  label: string;
-  id: string;
-  type?: string;
+interface InputFieldProps {
+  label?: string;
+  valueProp?: string | number;
+  prefix?: React.ReactNode | JSX.Element;
+  suffix?: React.ReactNode;
+  type?: "text" | "number" | "password";
+  name: string;
+  placeholder?: string;
   required?: boolean;
-  register: UseFormRegister<FieldValues>;
-  errors: FieldErrors;
+  passwordToggle?: boolean;
   disabled?: boolean;
-};
+  maxLength?: number;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  validInput?: string | number;
+  className?: string;
+}
 
 const InputField = ({
   label,
-  id,
-  type,
+  valueProp,
+  prefix,
+  suffix,
+  type = "text",
+  name,
+  placeholder,
   required,
-  register,
-  errors,
+  passwordToggle,
   disabled,
-}: InputProps) => {
-  return (
-    <div>
-      <label
-        className="block text-sm font-medium leading-6 text-gray-900"
-        htmlFor={id}
-      >
-        {label}
-      </label>
-      <div className="mt-2">
-        <input
-          id={id}
-          type={type}
-          autoComplete={id}
-          disabled={disabled}
-          {...register(id, { required })}
-          className={clsx(
-            "form-input block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 ",
-            errors[id] && "focus:ring-rose-500",
-            disabled && "opacity-50 cursor-default"
-          )}
-        />
-      </div>
-    </div>
-  );
+  maxLength,
+  onChange,
+  validInput,
+  className,
+}: InputFieldProps) => {
+  switch (type) {
+    case "text":
+      return (
+        <FormItem name={name} label={label} required={required}>
+          <Input
+            name={name}
+            placeholder={placeholder}
+            prefix={prefix}
+            suffix={suffix}
+            disabled={disabled}
+            maxLength={maxLength}
+            onChange={onChange}
+            value={validInput || valueProp}
+            className={className}
+          />
+          <ErrorMessage
+            render={(msg: string) => (
+              <div className="text-red-700 text-xs mt-1">{msg}</div>
+            )}
+            name={name}
+          />
+        </FormItem>
+      );
+    case "number":
+      return (
+        <FormItem name={name} label={label} required={required}>
+          <Input
+            disabled={disabled}
+            placeholder={placeholder}
+            name={name}
+            prefix={prefix}
+            maxLength={maxLength}
+            onChange={onChange}
+            value={validInput || valueProp}
+            suffix={suffix}
+          />
+          <ErrorMessage
+            render={(msg: string) => (
+              <div className="text-red-700 text-xs mt-1">{msg}</div>
+            )}
+            name={name}
+          />
+        </FormItem>
+      );
+    case "password":
+      return (
+        <FormItem name={name} label={label} required={required}>
+          <Input.Password
+            name={name}
+            disabled={disabled}
+            placeholder={placeholder}
+            visibilityToggle={passwordToggle}
+            prefix={prefix}
+            suffix={suffix}
+            maxLength={maxLength}
+            onChange={onChange}
+            value={validInput || valueProp}
+          />
+          <ErrorMessage
+            render={(msg: string) => (
+              <div className="text-red-700 text-xs mt-1">{msg}</div>
+            )}
+            name={name}
+          />
+        </FormItem>
+      );
+    default:
+      return (
+        <FormItem name={name} label={label}>
+          <Input
+            disabled={disabled}
+            prefix={prefix}
+            suffix={suffix}
+            name={name}
+            placeholder={placeholder}
+            maxLength={maxLength}
+            onChange={onChange}
+            value={validInput || valueProp}
+          />
+          <ErrorMessage
+            render={(msg: string) => (
+              <div className="text-red-700 text-xs mt-1">{msg}</div>
+            )}
+            name={name}
+          />
+        </FormItem>
+      );
+  }
 };
 
 export default InputField;
