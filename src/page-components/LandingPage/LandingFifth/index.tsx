@@ -29,6 +29,7 @@ const LandingFifth = (props: Props) => {
             height={1000}
             src={banner}
             alt="banner"
+            objectFit="contain"
           />
         </div>
       </div>
