@@ -8,7 +8,7 @@ type Props = {};
 const LandingForth = (props: Props) => {
   return (
     <section className="flex py-[80px] flex-col items-start   lg:pl-[130px] px-6  w-full bg-[#15002c] h-full ">
-      <div className="flex items-center justify-between w-full ">
+      <div className="flex items-center justify-between md:justify-center w-full ">
         <div className="flex flex-col items-start gap-6">
           <h1 className="font-Syne text-[36px] text-start font-[300] text-[#fff]  ">
             Love is global.

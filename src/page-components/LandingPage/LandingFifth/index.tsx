@@ -24,7 +24,7 @@ const LandingFifth = (props: Props) => {
         </div>
         <div>
           <Image
-            className="rounded-[16px] w-[500px] h-[400px] "
+            className="rounded-[16px] object-cover w-[500px] h-[400px] "
             width={600}
             height={1000}
             src={banner}
