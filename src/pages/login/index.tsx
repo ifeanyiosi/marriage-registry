@@ -6,10 +6,13 @@ import validationSchema from "@/page-components/Login/formSettings/validationSch
 import { Formik } from "formik";
 import { Form } from "formik-antd";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
-type Props = {};
-
-const Login = (props: Props) => {
+const Login = () => {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  
   return (
     <div className="w-full h-screen  relative flex flex-col items-center justify-center">
       <div className="bg-primary w-full h-[50%] py-[80px] pb-[80px] flex flex-col gap-[50px] ">
@@ -23,7 +26,12 @@ const Login = (props: Props) => {
           initialValues={formInitialValues}
           validationSchema={validationSchema.login}
           onSubmit={(values) => {
+            setLoading(true);
             console.log(values);
+            setTimeout(() => {
+              setLoading(false);
+              router.push("/dashboard");
+            }, 1500);
           }}
         >
           {() => (
@@ -38,6 +46,7 @@ const Login = (props: Props) => {
                   placeholder={formData.fields.email.name}
                   type="text"
                   required={formData.fields.email.required}
+                  disabled={loading}
                 />
                 <InputField
                   name={formData.fields.password.name}
@@ -45,10 +54,16 @@ const Login = (props: Props) => {
                   placeholder={formData.fields.password.placeholder}
                   type="password"
                   required={formData.fields.password.required}
+                  disabled={loading}
                 />
               </div>
               <div className="w-full">
-                <Button variant="primary" className="w-full py-6">
+                <Button
+                  isLoading={loading}
+                  disabled={loading}
+                  variant="primary"
+                  className="w-full py-6"
+                >
                   SIGN IN
                 </Button>
                 <div className="pt-6">

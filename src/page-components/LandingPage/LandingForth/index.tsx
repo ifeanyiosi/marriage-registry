@@ -2,15 +2,17 @@ import Image from "next/image";
 import React from "react";
 import globe from "../../../images/globe.png";
 import Button from "@/components/Button";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 const LandingForth = (props: Props) => {
+  const router = useRouter();
   return (
     <section className="flex py-[80px] flex-col items-start   lg:pl-[130px] px-6  w-full bg-[#15002c] h-full ">
       <div className="flex items-center justify-between md:justify-center w-full ">
         <div className="flex flex-col items-start gap-6">
-          <h1 className="font-Syne text-[36px] text-start font-[300] text-[#fff]  ">
+          <h1 className="font-Syne text-[36px] text-start font-bold text-[#fff]  ">
             Love is global.
           </h1>
           <p className="text-[16px] font-Inter max-w-[500px] text-[#fff] text-start ">
@@ -19,7 +21,11 @@ const LandingForth = (props: Props) => {
             the way of love.
           </p>
           <div className="lg:max-w-[300px] py-6 w-full">
-            <Button variant="primary" className="w-full">
+            <Button
+              onClick={() => router.push("/signup")}
+              variant="primary"
+              className="w-full"
+            >
               Get Started
             </Button>
           </div>

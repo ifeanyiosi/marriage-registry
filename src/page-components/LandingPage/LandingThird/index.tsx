@@ -12,7 +12,7 @@ const LandingThird = (props: Props) => {
   return (
     <section className="bg-[#f6f6ff] w-full flex flex-col items-center h-full py-[80px] lg:px-[130px] px-6 ">
       <div className="flex flex-col items-start md:items-center w-full">
-        <h1 className="text-[36px] text-[#171722] font-[300] mb-[24px] font-Syne ">
+        <h1 className="text-[36px] text-[#171722] font-bold mb-[24px] font-Syne ">
           From start to “I do.”
         </h1>
         <p className="text-[16px] lg:max-w-[50%] text-start w-full text-[#171722] font-[400] font-Inter">
