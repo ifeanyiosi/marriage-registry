@@ -58,8 +58,9 @@ const NavigationBar = () => {
                 Resources
               </Link>
 
-              <div className="flex flex-col gap-8 px-4 py-4">
+              <div className="flex max-w-[250px] flex-col gap-8 px-4 py-4">
                 <Button
+                  className="w-full"
                   onClick={() => router.push("/login")}
                   variant="secondary"
                 >
@@ -67,6 +68,7 @@ const NavigationBar = () => {
                 </Button>
 
                 <Button
+                  className="w-full"
                   onClick={() => router.push("/signup")}
                   variant="primary"
                 >
