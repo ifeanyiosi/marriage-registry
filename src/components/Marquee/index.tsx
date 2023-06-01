@@ -13,7 +13,7 @@ const Marquee = ({ heading, body, image }: MarqueeProps) => {
       <div className="flex flex-col  items-center justify-center ">
         <div className="h-[300px] ">
           <Image
-            className="rounded-[16px] max-h-[250px] h-full "
+            className="rounded-[16px] object-cover max-h-[250px] h-full "
             height={200}
             width={300}
             src={image}

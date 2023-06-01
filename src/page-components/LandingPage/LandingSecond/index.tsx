@@ -10,7 +10,7 @@ const LandingSecond = (props: Props) => {
     <section className="flex flex-col justify-between lg:px-[130px] px-6 py-[80px] ">
       <div className="flex flex-col lg:flex-row gap-[20px] ">
         <div className=" w-full gap-8  flex flex-col ">
-          <h1 className="lg:max-w-[50%] text-[#171722] font-[300] w-full text-start text-[36px] ">
+          <h1 className="lg:max-w-[50%] text-[#171722] font-bold w-full text-start text-[36px] ">
             Fast, easy, legal.
           </h1>
           <p className="lg:max-w-[60%] w-full text-start text-[16px] font-[400] text-[#171722] ">
@@ -20,7 +20,7 @@ const LandingSecond = (props: Props) => {
           </p>
 
           <div className="flex flex-col  items-start px-[20px] ">
-            <h1 className="text-[20px] text-[#222] mb-[8px] ">
+            <h1 className="text-[20px] font-semibold text-[#222] mb-[8px] ">
               Get Marriage License
             </h1>
             <p className="lg:max-w-[50%] w-full text-start text-[#222] text-[14px] ">
@@ -29,7 +29,7 @@ const LandingSecond = (props: Props) => {
             </p>
           </div>
           <div className="flex flex-col  items-start px-[20px] ">
-            <h1 className="text-[20px] text-[#222] mb-[8px] ">
+            <h1 className="text-[20px] font-semibold text-[#222] mb-[8px] ">
               Receive Certificate
             </h1>
             <p className="lg:max-w-[50%] w-full text-start text-[#222] text-[14px] ">

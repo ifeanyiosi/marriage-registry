@@ -11,8 +11,8 @@ type Props = {};
 const LandingThird = (props: Props) => {
   return (
     <section className="bg-[#f6f6ff] w-full flex flex-col items-center h-full py-[80px] lg:px-[130px] px-6 ">
-      <div className="flex flex-col items-start w-full">
-        <h1 className="text-[36px] text-[#171722] font-[300] mb-[24px] font-Syne ">
+      <div className="flex flex-col items-start md:items-center w-full">
+        <h1 className="text-[36px] text-[#171722] font-bold mb-[24px] font-Syne ">
           From start to “I do.”
         </h1>
         <p className="text-[16px] lg:max-w-[50%] text-start w-full text-[#171722] font-[400] font-Inter">
@@ -22,10 +22,10 @@ const LandingThird = (props: Props) => {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full justify-between mt-[80px] gap-8">
+      <div className="flex flex-col items-center lg:flex-row w-full justify-between mt-[80px] gap-4">
         <div className="flex flex-col items-start justify-center">
           <Image
-            className="w-full max-w-[400px] rounded-[16px]"
+            className="w-full object-cover max-w-[400px] rounded-[16px]"
             height={400}
             width={400}
             src={image1}
@@ -35,13 +35,13 @@ const LandingThird = (props: Props) => {
             99% Success Rate
           </h2>
           <p className="text-[14px] font-Inter text-start font-[400]  ">
-            All Courtly officiants are based worldwide and licensed to <br /> perform
-            remote ceremonies.
+            All Courtly officiants are based worldwide and licensed to <br />{" "}
+            perform remote ceremonies.
           </p>
         </div>
         <div className="flex flex-col items-start justify-center  ">
           <Image
-            className="w-full max-w-[400px] max-h-[400px] rounded-[16px]"
+            className="w-full object-cover max-w-[400px] rounded-[16px]"
             height={400}
             width={400}
             src={image2}
@@ -51,13 +51,14 @@ const LandingThird = (props: Props) => {
             Satisfaction Guarantee
           </h2>
           <p className="text-[14px] font-Inter text-start font-[400] ">
-            Get a full refund if your Marriage License is cancelled or not <br />
+            Get a full refund if your Marriage License is cancelled or not{" "}
+            <br />
             approved for any reason.
           </p>
         </div>
         <div className="flex flex-col items-start justify-center">
           <Image
-            className="w-full max-w-[400px] rounded-[16px]"
+            className="w-full object-cover max-w-[400px] rounded-[16px]"
             height={400}
             width={400}
             src={image1}
@@ -67,8 +68,8 @@ const LandingThird = (props: Props) => {
             Worldwide-Based Officiants
           </h2>
           <p className="text-[14px] font-Inter text-start font-[400]  ">
-            All Courtly officiants are based worldwide and licensed to <br /> perform
-            remote ceremonies.
+            All Courtly officiants are based worldwide and licensed to <br />{" "}
+            perform remote ceremonies.
           </p>
         </div>
       </div>

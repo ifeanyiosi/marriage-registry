@@ -8,7 +8,7 @@ const faqData: FAQ[] = [
   {
     question: "What is LOML?",
     answers:
-      "Courtly is the leader in online marriage—making it possible for any couple around the world to get legally married online, 24/7. From obtaining a marriage license to performing the ceremony, Courtly is bringing the aisle online for couples in the 21st century—regardless of their nationality, sexuality, or physical location.",
+      "LOML is the leader in online marriage—making it possible for any couple around the world to get legally married online, 24/7. From obtaining a marriage license to performing the ceremony, Courtly is bringing the aisle online for couples in the 21st century—regardless of their nationality, sexuality, or physical location.",
   },
   {
     question: " WHo can use LOML",
@@ -19,10 +19,10 @@ const faqData: FAQ[] = [
   },
 
   {
-    question: " How mmuch does it cost to get married on  LOML",
+    question: " How much does it cost to get married on  LOML",
 
     answers: [
-      "Courtly’s standard marriage package includes a valid marriage license, online ceremony, and legal, US marriage certificate for just $499. Learn more about our add-ons on our Pricing page.",
+      "LOML’s standard marriage package includes a valid marriage license, online ceremony, and legal, US marriage certificate for just $499. Learn more about our add-ons on our Pricing page.",
     ],
   },
 
@@ -44,7 +44,7 @@ const faqData: FAQ[] = [
     question: "How much does it cost to get married on LOML?",
 
     answers: [
-      "Courtly’s standard marriage package includes a valid marriage license, online ceremony, and legal, US marriage certificate for just $499. Learn more about our add-ons on our Pricing page.",
+      "LOML’s standard marriage package includes a valid marriage license, online ceremony, and legal, US marriage certificate for just $499. Learn more about our add-ons on our Pricing page.",
     ],
   },
 

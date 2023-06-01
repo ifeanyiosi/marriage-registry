@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Button from "@/components/Button";
 import Marquee from "@/components/Marquee";
 import React from "react";
@@ -9,6 +10,7 @@ import couple4 from "../../../images/tanner-geringer-jWWEn-nnBRQ-unsplash.jpg";
 type Props = {};
 
 const LandingHero = (props: Props) => {
+  const router = useRouter();
   return (
     <section className="w-full flex flex-col lg:h-full items-center justify-center ">
       <div className="  flex flex-col items-center justify-center gap-4 w-full px-6 py-[80px] ">
@@ -22,10 +24,18 @@ const LandingHero = (props: Props) => {
           </p>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center max-w-[240px] lg:max-w-[500px] w-full py-6 gap-8">
-          <Button className="w-full min-w-[240px] py-6" variant="primary">
+          <Button
+            onClick={() => router.push("/signup")}
+            className="w-full min-w-[240px] py-6"
+            variant="primary"
+          >
             Get Married Online
           </Button>
-          <Button className="w-full py-6 min-w-[240px]" variant="secondary">
+          <Button
+            onClick={() => router.push("/contact")}
+            className="w-full py-6 min-w-[240px]"
+            variant="secondary"
+          >
             Contact Us
           </Button>
         </div>
