@@ -20,7 +20,7 @@ const Login = () => {
           LOML
         </Link>
       </div>
-      <div className="bg-choiceTwo w-full h-[50%]" />
+      <div className="bg-[#0d1117] w-full h-[50%]" />
       <div className="absolute translate-x-[-50%] max-w-[350px] md:max-w-[500px] w-full  left-[50%] flex items-center justify-center rounded-[16px] bg-white px-6  py-4 ">
         <Formik
           initialValues={formInitialValues}

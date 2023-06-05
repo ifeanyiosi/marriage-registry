@@ -1,28 +1,48 @@
 import React, { useState } from "react";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "@/firebase/app";
 import { Field, Form } from "formik-antd";
 import { FaCheckSquare } from "react-icons/fa";
 import { Formik } from "formik";
 import FormContainer from "@/components/FormContainer";
 import InputField from "@/components/InputField";
-import NavigationBar from "@/components/NavigationBar";
 import formData from "@/page-components/Signup/formSettings/formData";
 import formInitialValues from "@/page-components/Signup/formSettings/formInitialValues";
 import validationSchema from "@/page-components/Signup/formSettings/validationSchema";
 import Button from "@/components/Button";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 type Props = {};
 
 const Signup = (props: Props) => {
-  const [checkTerms, setCheckTerms] = useState(false);
-  const [checkTermsErrMsg, setCheckTermsErrMsg] = useState("");
+  const [signUpForm, setSignUpForm] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [error, setError] = useState("");
+
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   return (
-    <div className="w-full h-screen bg-primary relative flex flex-col items-center justify-center">
-      <NavigationBar />
-      <div className="bg-primary px-4 w-full items-center pt-[100px] lg:pt-[150px] justify-center h-full">
+    <div className="w-full bg-signup h-full pb-[50px]  relative flex flex-col items-center justify-center">
+      <div className="flex items-center w-full justify-between px-4 lg:px-[150px] py-6">
+        <div>
+          <Link href="/" className="text-choiceTwo text-[32px] ">
+            LOML
+          </Link>
+        </div>
+        <div className="flex flex-col lg:flex-row lg:items-center items-start lg:gap-2">
+          <p className="text-gray-500">Already have an account?</p>
+          <Link href="/login" className="text-white">
+            Sign in
+          </Link>
+        </div>
+      </div>
+      <div className=" px-4  w-full items-center pt-[50px] pb-[50px] lg:pt-[150px] justify-center h-full">
         <FormContainer>
           <div className="w-full  overscroll-y-hidden">
             <Formik

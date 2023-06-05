@@ -1,9 +1,17 @@
+import Sidebar from "@/components/Sidebar";
 import React from "react";
 
 type Props = {};
 
 const Dashboard = (props: Props) => {
-  return <div className="w-full bg-red-400 h-full mt-[80px] ">Dashboard</div>;
+  return (
+    <div className="">
+      <Sidebar />
+      <div className="pt-[100px] bg-purple-50 h-screen ">
+        help me
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;
