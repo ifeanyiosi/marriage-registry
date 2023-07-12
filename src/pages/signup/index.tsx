@@ -28,7 +28,7 @@ const Signup = (props: Props) => {
   const router = useRouter();
 
   return (
-    <div className="w-full bg-signup h-full pb-[50px]  relative flex flex-col items-center justify-center">
+    <div className="w-full bg-signup lg:h-screen h-full pb-[50px]  relative flex flex-col items-center justify-center">
       <div className="flex items-center w-full justify-between px-4 lg:px-[150px] py-6">
         <div>
           <Link href="/" className="text-choiceTwo text-[32px] ">

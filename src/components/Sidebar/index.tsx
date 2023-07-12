@@ -20,7 +20,7 @@ const Sidebar = (props: Props) => {
 
   return (
     <div className="w-full fixed flex">
-      <div className="h-screen hidden lg:flex flex-col bg-primary lg:w-[200px] left-0 ">
+      <div className="h-screen hidden lg:flex flex-col bg-primary lg:w-[200px] w-max left-0 ">
         <div className="flex w-full justify-center h-[80px] border-b-[1px] border-choiceTwo ">
           <h1 className="text-[40px] text-white ">LOML</h1>
         </div>
